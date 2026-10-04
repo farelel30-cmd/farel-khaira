@@ -2,7 +2,14 @@ const start = new Date('2025-09-27T23:15:00+07:00');
 const countdown=document.getElementById('countdown');
 function updateTime(){let now=new Date();let y=now.getFullYear()-start.getFullYear();let anchor=new Date(start);anchor.setFullYear(start.getFullYear()+y);if(anchor>now){y--;anchor.setFullYear(start.getFullYear()+y)}let m=0;while(true){let next=new Date(anchor);next.setMonth(anchor.getMonth()+m+1);if(next<=now)m++;else break}anchor.setMonth(anchor.getMonth()+m);let diff=Math.max(0,now-anchor);let d=Math.floor(diff/86400000);let h=Math.floor(diff/3600000)%24;let min=Math.floor(diff/60000)%60;let s=Math.floor(diff/1000)%60;countdown.innerHTML=[[''+y,'Years'],[''+m,'Months'],[''+d,'Days'],[''+h,'Hours'],[''+min,'Minutes'],[''+s,'Seconds']].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}
 updateTime();setInterval(updateTime,1000);
-const memories=['Sunset by the Sea','Camera Moments','Little Adventures','By the Waterfall','Mirror Selfie','A Day to Remember'];
+const memories = [
+  'Pantai Tirang',
+  'Curug Semirang',
+  'On Seven',
+  'Curug Telu',
+  'Dies Natalis',
+  'Hari Batik'
+];
 const gallery=document.getElementById('gallery');memories.forEach((name,i)=>{const el=document.createElement('article');el.className='memory';el.innerHTML=`<div class="memory-content"><b>${name}</b><span>memory ${String(i+1).padStart(2,'0')} · click to view</span></div>`;el.onclick=()=>openPhoto(name);gallery.appendChild(el)});
 function openPhoto(name){document.getElementById('photoCaption').textContent=name;document.getElementById('photoModal').classList.add('show')}function closePhoto(){document.getElementById('photoModal').classList.remove('show')}
 const letterModal=document.getElementById('letterModal');document.getElementById('readLetter').onclick=()=>letterModal.classList.add('show');document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>letterModal.classList.remove('show'));document.querySelector('[data-photo-close]').onclick=closePhoto;
