@@ -1,4 +1,4 @@
-const start=new Date('2024-01-01T00:00:00');
+const start = new Date('2025-09-27T23:15:00+07:00');
 const countdown=document.getElementById('countdown');
 function updateTime(){let now=new Date();let y=now.getFullYear()-start.getFullYear();let anchor=new Date(start);anchor.setFullYear(start.getFullYear()+y);if(anchor>now){y--;anchor.setFullYear(start.getFullYear()+y)}let m=0;while(true){let next=new Date(anchor);next.setMonth(anchor.getMonth()+m+1);if(next<=now)m++;else break}anchor.setMonth(anchor.getMonth()+m);let diff=Math.max(0,now-anchor);let d=Math.floor(diff/86400000);let h=Math.floor(diff/3600000)%24;let min=Math.floor(diff/60000)%60;let s=Math.floor(diff/1000)%60;countdown.innerHTML=[[''+y,'Years'],[''+m,'Months'],[''+d,'Days'],[''+h,'Hours'],[''+min,'Minutes'],[''+s,'Seconds']].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}
 updateTime();setInterval(updateTime,1000);
