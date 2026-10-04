@@ -1,24 +1,547 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Our Love Sanctuary</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="bg"><i></i><i></i><i></i><i></i><i></i></div>
-<header class="nav"><a href="#home" class="brand"><span>♡</span> Our Love Sanctuary</a><button class="menu" aria-label="menu">☰</button><nav><a href="#home">Our Sanctuary</a><a href="#journey">Our Journey</a><a href="#letters">Love Letters</a><a href="#memories">Memories</a><a href="#growth">Our Growth</a><a href="#songs">Our Songs</a></nav></header>
+
+<div class="bg">
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+</div>
+
+
+<!-- NAVBAR -->
+<header class="nav">
+
+  <a href="#home" class="brand">
+    <span>♡</span> Our Love Sanctuary
+  </a>
+
+  <button class="menu" aria-label="menu">
+    ☰
+  </button>
+
+  <nav>
+    <a href="#home">Our Sanctuary</a>
+    <a href="#journey">Our Journey</a>
+    <a href="#letters">Love Letters</a>
+    <a href="#memories">Memories</a>
+    <a href="#growth">Our Growth</a>
+    <a href="#songs">Our Songs</a>
+  </nav>
+
+</header>
+
+
 <main>
-<section id="home" class="hero page"><div class="hero-inner"><div class="tiny">✦ A LITTLE PLACE FOR US ✦</div><h1>Forever <em>&amp;</em> Always</h1><p class="lead">Tempat kecil buat nyimpen semua cerita, foto, dan momen seru yang pernah kita lewati bareng.</p><div class="hero-heart">♡</div><div class="magic"><div class="tiny">OUR TIME TOGETHER</div><h2>We’ve Been Creating Magic For...</h2><div class="countdown" id="countdown"></div></div><div class="stats"><div><strong>∞</strong><span>Beautiful Days</span></div><div><strong>♡</strong><span>Precious Memories</span></div><div><strong>∞</strong><span>Laughs Shared</span></div><div><strong>♡</strong><span>Forever Together</span></div></div></div></section>
-<section id="journey" class="page"><div class="heading"><div class="tiny">OUR STORY</div><h2>Our Journey</h2><p>Dari awal kenal sampai sekarang, ternyata banyak banget cerita yang kita punya.</p></div><div class="timeline"><article><b>01</b><div><small>THE BEGINNING</small><h3>Awal dari Semuanya</h3><p>Semua cerita selalu punya satu awal. Ini adalah bagian kecil dari perjalanan yang kita mulai bersama.</p></div></article><article><b>02</b><div><small>THE MEMORIES</small><h3>Banyak Momen Kecil</h3><p>Obrolan random, ketawa, jalan-jalan, dan hari biasa yang akhirnya jadi kenangan.</p></div></article><article><b>03</b><div><small>STILL GOING</small><h3>Cerita Kita Masih Panjang</h3><p>Nggak tahu nanti bakal ke mana, tapi kalau masih bisa bareng, masih banyak cerita baru yang bisa kita buat.</p></div></article></div></section>
-<section id="letters" class="page"><div class="heading"><div class="tiny">A LETTER FOR YOU</div><h2>Love Letters</h2><p>Beberapa kata yang ingin disimpan di tempat kecil ini.</p></div><article class="letter glass"><div class="seal">♡</div><div class="tiny">FOR SOMEONE SPECIAL</div><h3>Untuk Kamu</h3><p>Sayang,</p><p>Nggak kerasa ya, waktu terus jalan, tapi entah kenapa namamu masih jadi salah satu hal favoritku. Rasanya juga selalu nyaman setiap kali ada kamu.</p><p>Makasih buat semua tawa, obrolan random, momen-momen kecil, sampai hari-hari biasa yang jadi terasa lebih seru karena kita lewatin bareng.</p><p>Kita mungkin nggak tahu bakal sejauh apa cerita ini berjalan, tapi aku senang bisa punya banyak cerita bareng kamu sampai sekarang.</p><button class="outline" id="readLetter">Read the full letter</button></article></section>
-<section id="memories" class="page"><div class="heading"><div class="tiny">OUR FAVORITE MOMENTS</div><h2>Memories</h2><p>Beberapa momen yang layak disimpan selamanya.</p></div><div class="gallery" id="gallery"></div></section>
-<section id="growth" class="page"><div class="heading"><div class="tiny">US, GROWING TOGETHER</div><h2>Our Growth</h2><p>Hal-hal kecil yang bikin perjalanan kita terus berkembang.</p></div><div class="growth"><article class="glass"><span>♡</span><small>01</small><h3>Understanding</h3><p>Belajar saling memahami dan menghargai hal-hal kecil.</p></article><article class="glass"><span>✦</span><small>02</small><h3>Growing</h3><p>Terus berkembang menjadi versi diri yang lebih baik.</p></article><article class="glass"><span>∞</span><small>03</small><h3>Creating</h3><p>Membuat lebih banyak cerita dan pengalaman baru.</p></article></div></section>
-<section id="songs" class="page"><div class="heading"><div class="tiny">OUR SOUNDTRACK</div><h2>Our Songs</h2><p>Lagu-lagu yang mengingatkan kita pada cerita tertentu.</p></div><div class="music"><div class="player glass"><div class="cover" id="cover">♡</div><div class="tiny">NOW PLAYING</div><h3 id="songTitle">Kisah Romantis</h3><p id="songArtist">Glenn Fredly</p><input id="progress" type="range" min="0" max="100" value="0"><div class="player-controls"><button id="prev">‹</button><button id="play">▶</button><button id="next">›</button></div></div><div class="playlist" id="playlist"></div></div></section>
+
+
+<!-- ==================== HOME ==================== -->
+
+<section id="home" class="hero page">
+
+  <div class="hero-inner">
+
+    <div class="tiny">
+      ✦ A LITTLE PLACE FOR US ✦
+    </div>
+
+    <h1>
+      Forever <em>&amp;</em> Always
+    </h1>
+
+    <p class="lead">
+      Tempat kecil buat nyimpen semua cerita, foto, dan momen seru yang pernah kita lewati bareng.
+    </p>
+
+    <div class="hero-heart">
+      ♡
+    </div>
+
+
+    <div class="magic">
+
+      <div class="tiny">
+        OUR TIME TOGETHER
+      </div>
+
+      <h2>
+        We’ve Been Creating Magic For...
+      </h2>
+
+      <div class="countdown" id="countdown"></div>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div>
+        <strong>∞</strong>
+        <span>Beautiful Days</span>
+      </div>
+
+      <div>
+        <strong>♡</strong>
+        <span>Precious Memories</span>
+      </div>
+
+      <div>
+        <strong>∞</strong>
+        <span>Laughs Shared</span>
+      </div>
+
+      <div>
+        <strong>♡</strong>
+        <span>Forever Together</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== JOURNEY ==================== -->
+
+<section id="journey" class="page">
+
+  <div class="heading">
+
+    <div class="tiny">
+      OUR STORY
+    </div>
+
+    <h2>
+      Our Journey
+    </h2>
+
+    <p>
+      Dari awal kenal sampai sekarang, ternyata banyak banget cerita yang kita punya.
+    </p>
+
+  </div>
+
+
+  <div class="timeline">
+
+    <article>
+
+      <b>01</b>
+
+      <div>
+
+        <small>
+          THE BEGINNING
+        </small>
+
+        <h3>
+          Awal dari Semuanya
+        </h3>
+
+        <p>
+          Semua cerita selalu punya satu awal. Ini adalah bagian kecil dari perjalanan yang kita mulai bersama.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article>
+
+      <b>02</b>
+
+      <div>
+
+        <small>
+          THE MEMORIES
+        </small>
+
+        <h3>
+          Banyak Momen Kecil
+        </h3>
+
+        <p>
+          Obrolan random, ketawa, jalan-jalan, dan hari biasa yang akhirnya jadi kenangan.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article>
+
+      <b>03</b>
+
+      <div>
+
+        <small>
+          STILL GOING
+        </small>
+
+        <h3>
+          Cerita Kita Masih Panjang
+        </h3>
+
+        <p>
+          Nggak tahu nanti bakal ke mana, tapi kalau masih bisa bareng, masih banyak cerita baru yang bisa kita buat.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== LOVE LETTERS ==================== -->
+
+<section id="letters" class="page">
+
+  <div class="heading">
+
+    <div class="tiny">
+      A LETTER FOR YOU
+    </div>
+
+    <h2>
+      Love Letters
+    </h2>
+
+    <p>
+      Beberapa kata yang ingin disimpan di tempat kecil ini.
+    </p>
+
+  </div>
+
+
+  <article class="letter glass">
+
+    <div class="seal">
+      ♡
+    </div>
+
+    <div class="tiny">
+      FOR SOMEONE SPECIAL
+    </div>
+
+    <h3>
+      Untuk Kamu
+    </h3>
+
+    <p>
+      Sayang,
+    </p>
+
+    <p>
+      Nggak kerasa ya, waktu terus jalan, tapi entah kenapa namamu masih jadi salah satu hal favoritku. Rasanya juga selalu nyaman setiap kali ada kamu.
+    </p>
+
+    <p>
+      Makasih buat semua tawa, obrolan random, momen-momen kecil, sampai hari-hari biasa yang jadi terasa lebih seru karena kita lewatin bareng.
+    </p>
+
+    <p>
+      Kita mungkin nggak tahu bakal sejauh apa cerita ini berjalan, tapi aku senang bisa punya banyak cerita bareng kamu sampai sekarang.
+    </p>
+
+    <button class="outline" id="readLetter">
+      Read the full letter
+    </button>
+
+  </article>
+
+</section>
+
+
+<!-- ==================== MEMORIES ==================== -->
+
+<section id="memories" class="page">
+
+  <div class="heading">
+
+    <div class="tiny">
+      OUR FAVORITE MOMENTS
+    </div>
+
+    <h2>
+      Memories
+    </h2>
+
+    <p>
+      Beberapa momen yang layak disimpan selamanya.
+    </p>
+
+  </div>
+
+
+  <!-- 6 FOTO MEMORIES HALAMAN 1 -->
+
+  <div class="gallery" id="gallery"></div>
+
+
+  <!-- NAVIGASI HALAMAN MEMORIES -->
+
+  <div class="memory-navigation">
+
+    <span class="memory-page-number">
+      1 / 2
+    </span>
+
+    <a href="memories-2.html" class="memory-nav-btn">
+      Next →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== GROWTH ==================== -->
+
+<section id="growth" class="page">
+
+  <div class="heading">
+
+    <div class="tiny">
+      US, GROWING TOGETHER
+    </div>
+
+    <h2>
+      Our Growth
+    </h2>
+
+    <p>
+      Hal-hal kecil yang bikin perjalanan kita terus berkembang.
+    </p>
+
+  </div>
+
+
+  <div class="growth">
+
+    <article class="glass">
+
+      <span>♡</span>
+
+      <small>01</small>
+
+      <h3>
+        Understanding
+      </h3>
+
+      <p>
+        Belajar saling memahami dan menghargai hal-hal kecil.
+      </p>
+
+    </article>
+
+
+    <article class="glass">
+
+      <span>✦</span>
+
+      <small>02</small>
+
+      <h3>
+        Growing
+      </h3>
+
+      <p>
+        Terus berkembang menjadi versi diri yang lebih baik.
+      </p>
+
+    </article>
+
+
+    <article class="glass">
+
+      <span>∞</span>
+
+      <small>03</small>
+
+      <h3>
+        Creating
+      </h3>
+
+      <p>
+        Membuat lebih banyak cerita dan pengalaman baru.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== SONGS ==================== -->
+
+<section id="songs" class="page">
+
+  <div class="heading">
+
+    <div class="tiny">
+      OUR SOUNDTRACK
+    </div>
+
+    <h2>
+      Our Songs
+    </h2>
+
+    <p>
+      Lagu-lagu yang mengingatkan kita pada cerita tertentu.
+    </p>
+
+  </div>
+
+
+  <div class="music">
+
+    <div class="player glass">
+
+      <div class="cover" id="cover">
+        ♡
+      </div>
+
+      <div class="tiny">
+        NOW PLAYING
+      </div>
+
+      <h3 id="songTitle">
+        Kisah Romantis
+      </h3>
+
+      <p id="songArtist">
+        Glenn Fredly
+      </p>
+
+      <input
+        id="progress"
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+      >
+
+      <div class="player-controls">
+
+        <button id="prev">
+          ‹
+        </button>
+
+        <button id="play">
+          ▶
+        </button>
+
+        <button id="next">
+          ›
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="playlist"
+      id="playlist">
+    </div>
+
+  </div>
+
+</section>
+
+
 </main>
-<div class="modal" id="letterModal"><div class="modal-card"><button class="x" data-close>×</button><div class="seal">♡</div><div class="tiny">FOREVER &amp; ALWAYS</div><h2>Our Little Letter</h2><p>Entah kenapa, setelah selama ini, namamu masih jadi salah satu hal favoritku, dan rasanya selalu nyaman saat ada kamu.</p><p>Banyak hal seru yang bisa kita lakukan, tapi momen sederhana bareng kamu selalu jadi favoritku.</p><p>Semoga cerita kita masih panjang, dan masih ada banyak hari indah, tawa, dan cerita baru yang bisa kita simpan di sini.</p><span>♡ forever &amp; always</span></div></div>
-<div class="photo-modal" id="photoModal"><button class="x" data-photo-close>×</button><div class="photo-placeholder" id="photoView"></div><p id="photoCaption"></p></div>
+
+
+<!-- ==================== LETTER MODAL ==================== -->
+
+<div class="modal" id="letterModal">
+
+  <div class="modal-card">
+
+    <button class="x" data-close>
+      ×
+    </button>
+
+    <div class="seal">
+      ♡
+    </div>
+
+    <div class="tiny">
+      FOREVER &amp; ALWAYS
+    </div>
+
+    <h2>
+      Our Little Letter
+    </h2>
+
+    <p>
+      Entah kenapa, setelah selama ini, namamu masih jadi salah satu hal favoritku, dan rasanya selalu nyaman saat ada kamu.
+    </p>
+
+    <p>
+      Banyak hal seru yang bisa kita lakukan, tapi momen sederhana bareng kamu selalu jadi favoritku.
+    </p>
+
+    <p>
+      Semoga cerita kita masih panjang, dan masih ada banyak hari indah, tawa, dan cerita baru yang bisa kita simpan di sini.
+    </p>
+
+    <span>
+      ♡ forever &amp; always
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- ==================== PHOTO MODAL ==================== -->
+
+<div class="photo-modal" id="photoModal">
+
+  <button
+    class="x"
+    data-photo-close>
+    ×
+  </button>
+
+  <div
+    class="photo-placeholder"
+    id="photoView">
+  </div>
+
+  <p id="photoCaption"></p>
+
+</div>
+
+
+<!-- SCRIPT -->
+
 <script src="script.js"></script>
-</body></html>
+
+</body>
+</html>
