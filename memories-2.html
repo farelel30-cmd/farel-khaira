@@ -6,171 +6,198 @@
 
   <title>Memories — Our Love Sanctuary</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">
-      Our Love Sanctuary
-    </div>
-
-    <div class="menu">
-      ☰
-    </div>
-
-    <div class="nav-links">
-      <a href="index.html">Our Sanctuary</a>
-      <a href="journey.html">Our Journey</a>
-      <a href="letters.html">Love Letters</a>
-      <a href="memories.html" class="active">Memories</a>
-      <a href="growth.html">Our Growth</a>
-      <a href="songs.html">Our Songs</a>
-    </div>
-  </nav>
-
-
-  <!-- MEMORIES -->
-  <main>
-
-    <section id="memories">
-
-      <div class="section-heading">
-        <span>OUR MEMORIES</span>
-
-        <h1>Kenangan Kita</h1>
-
-        <p>
-          Beberapa momen kecil yang selalu ingin kita ingat.
-        </p>
-      </div>
-
-
-      <!-- 6 FOTO HALAMAN 2 -->
-      <div class="gallery" id="gallery"></div>
-
-
-      <!-- NAVIGASI HALAMAN -->
-     <div class="memory-navigation">
-
-  <a href="index.html#memories" class="memory-nav-btn">
-    ← Previous
-  </a>
-
-  <span class="memory-page-number">
-    2 / 2
-  </span>
-
+<div class="bg">
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
 </div>
 
-    </section>
+<header class="nav">
 
-  </main>
+  <a href="index.html#home" class="brand">
+    <span>♡</span> Our Love Sanctuary
+  </a>
+
+  <button class="menu" aria-label="menu">☰</button>
+
+  <nav>
+    <a href="index.html#home">Our Sanctuary</a>
+    <a href="index.html#journey">Our Journey</a>
+    <a href="index.html#letters">Love Letters</a>
+    <a href="index.html#memories" class="active">Memories</a>
+    <a href="index.html#growth">Our Growth</a>
+    <a href="index.html#songs">Our Songs</a>
+  </nav>
+
+</header>
 
 
-  <!-- PHOTO MODAL -->
-  <div class="photo-modal" id="photoModal">
+<main>
 
-    <button
-      class="photo-close"
-      data-photo-close>
-      ×
-    </button>
+<section id="memories" class="page">
 
-    <div class="photo-modal-content">
+  <div class="heading">
 
-      <img
-        id="memoryPhoto"
-        src=""
-        alt="Memory">
-
-      <p id="photoCaption"></p>
-
+    <div class="tiny">
+      OUR FAVORITE MOMENTS
     </div>
+
+    <h2>
+      Memories
+    </h2>
+
+    <p>
+      Beberapa momen yang layak disimpan selamanya.
+    </p>
 
   </div>
 
 
-  <!-- SCRIPT -->
-  <script>
-
-    const memories = [
-      'Bukber',
-      'Hari Batik',
-      'Serrae',
-      'Playground',
-      'Pulang Bareng',
-      'Awan Costa'
-    ];
+  <div class="gallery" id="gallery"></div>
 
 
-    const gallery = document.getElementById('gallery');
+  <div class="memory-navigation">
+
+    <a
+      href="index.html#memories"
+      class="memory-nav-btn"
+    >
+      ← Previous
+    </a>
+
+    <span class="memory-page-number">
+      2 / 2
+    </span>
+
+  </div>
+
+</section>
+
+</main>
 
 
-    memories.forEach((name, i) => {
+<!-- PHOTO MODAL -->
 
-      const el = document.createElement('article');
+<div class="photo-modal" id="photoModal">
 
-      el.className = 'memory';
+  <button
+    class="x"
+    data-photo-close
+  >
+    ×
+  </button>
 
+  <div
+    class="photo-placeholder"
+    id="photoView"
+  ></div>
 
-      el.innerHTML = `
-        <div class="memory-content">
+  <p id="photoCaption"></p>
 
-          <b>${name}</b>
-
-          <span>
-            memory ${String(i + 7).padStart(2, '0')} · click to view
-          </span>
-
-        </div>
-      `;
-
-
-      el.onclick = () => openPhoto(name);
+</div>
 
 
-      gallery.appendChild(el);
+<script>
 
-    });
-
-
-    function openPhoto(name) {
-
-      document.getElementById('photoCaption').textContent = name;
-
-      document
-        .getElementById('photoModal')
-        .classList.add('show');
-
-    }
+const memories = [
+  'Bukber',
+  'Hari Batik',
+  'Serrae',
+  'Playground',
+  'Pulang Bareng',
+  'Awan Costa'
+];
 
 
-    function closePhoto() {
+const gallery = document.getElementById('gallery');
 
-      document
-        .getElementById('photoModal')
-        .classList.remove('show');
 
-    }
+memories.forEach((name, i) => {
 
+  const el = document.createElement('article');
+
+  el.className = 'memory';
+
+  el.innerHTML = `
+    <div class="memory-content">
+
+      <b>${name}</b>
+
+      <span>
+        memory ${String(i + 7).padStart(2, '0')} · click to view
+      </span>
+
+    </div>
+  `;
+
+  el.onclick = () => openPhoto(name);
+
+  gallery.appendChild(el);
+
+});
+
+
+function openPhoto(name) {
+
+  document.getElementById('photoCaption').textContent = name;
+
+  document
+    .getElementById('photoModal')
+    .classList.add('show');
+
+}
+
+
+function closePhoto() {
+
+  document
+    .getElementById('photoModal')
+    .classList.remove('show');
+
+}
+
+
+document
+  .querySelector('[data-photo-close]')
+  .onclick = closePhoto;
+
+
+document.addEventListener('keydown', (e) => {
+
+  if (e.key === 'Escape') {
+
+    closePhoto();
+
+  }
+
+});
+
+
+/* MOBILE MENU */
+
+document
+  .querySelector('.menu')
+  .onclick = () => {
 
     document
-      .querySelector('[data-photo-close]')
-      .onclick = closePhoto;
+      .querySelector('nav')
+      .classList.toggle('open');
 
+  };
 
-    document.addEventListener('keydown', (e) => {
-
-      if (e.key === 'Escape') {
-        closePhoto();
-      }
-
-    });
-
-  </script>
+</script>
 
 </body>
 </html>
