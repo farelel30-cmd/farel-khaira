@@ -642,3 +642,40 @@ window.addEventListener('keydown', event => {
   }
 
 });
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+const revealElements = document.querySelectorAll(
+  '.heading, .glass, .timeline article, .memory, .growth article, .music'
+);
+
+revealElements.forEach(element => {
+  element.classList.add('scroll-reveal');
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add('show');
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold:0.15,
+    rootMargin:'0px 0px -50px 0px'
+  }
+);
+
+revealElements.forEach(element => {
+  revealObserver.observe(element);
+});
