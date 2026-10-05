@@ -1302,3 +1302,264 @@ body.modal-open{
   object-position: center;
   border-radius: inherit;
 }
+/* =========================================
+   FULLSCREEN MEMORY PHOTO — FINAL
+========================================= */
+
+.photo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(5, 4, 18, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+.photo-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.photo-placeholder {
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 90vw;
+  max-height: 76vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  flex: 0 0 auto !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  animation: photoZoom 0.35s ease;
+}
+
+
+/* =========================================
+   GAMBAR
+========================================= */
+
+.photo-placeholder img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 90vw;
+  max-height: 76vh;
+
+  object-fit: contain;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 50px rgba(255, 105, 180, 0.18),
+    0 20px 80px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================
+   JUDUL FOTO
+========================================= */
+
+.photo-modal > p {
+  flex: 0 0 auto !important;
+
+  width: auto;
+  max-width: 90vw;
+
+  margin: 8px 0 0;
+  padding: 0;
+
+  color: #fff;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   TOMBOL CLOSE
+========================================= */
+
+.photo-modal .x {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #fff;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: 0.3s ease;
+}
+
+.photo-modal .x:hover {
+  transform: rotate(90deg);
+
+  background: rgba(255, 105, 180, 0.18);
+
+  border-color: rgba(255, 105, 180, 0.5);
+
+  box-shadow:
+    0 0 25px rgba(255, 105, 180, 0.2);
+}
+
+
+/* =========================================
+   ANIMASI
+========================================= */
+
+@keyframes photoZoom {
+
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   LOCK SCROLL
+========================================= */
+
+body.modal-open {
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .photo-modal {
+    padding: 20px;
+  }
+
+  .photo-placeholder {
+    max-width: 94vw;
+    max-height: 74vh;
+  }
+
+  .photo-placeholder img {
+    max-width: 94vw;
+    max-height: 74vh;
+
+    border-radius: 14px;
+  }
+
+  .photo-modal > p {
+    max-width: 94vw;
+
+    margin-top: 7px;
+
+    font-size: 19px;
+  }
+
+  .photo-modal .x {
+    top: 18px;
+    right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 24px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .photo-placeholder {
+    max-width: 92vw;
+    max-height: 70vh;
+  }
+
+  .photo-placeholder img {
+    max-width: 92vw;
+    max-height: 70vh;
+  }
+
+  .photo-modal > p {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+
+}
