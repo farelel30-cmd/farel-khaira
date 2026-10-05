@@ -1588,3 +1588,195 @@ body.modal-open{
     max-height:70vh;
   }
 }
+/* =========================================
+   SCROLL REVEAL ANIMATION
+   Desktop + Mobile
+========================================= */
+
+.scroll-reveal{
+  opacity:0;
+  transform:translateY(45px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.scroll-reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.heading.scroll-reveal{
+  transform:translateY(35px);
+}
+
+.heading.scroll-reveal.show{
+  transform:translateY(0);
+}
+
+
+/* =========================================
+   MEMORY CARDS
+========================================= */
+
+.memory.scroll-reveal{
+  transform:translateY(35px) scale(.97);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.memory.scroll-reveal.show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+
+/* Memory muncul satu per satu */
+
+.memory:nth-child(1){
+  transition-delay:.05s;
+}
+
+.memory:nth-child(2){
+  transition-delay:.12s;
+}
+
+.memory:nth-child(3){
+  transition-delay:.19s;
+}
+
+.memory:nth-child(4){
+  transition-delay:.26s;
+}
+
+.memory:nth-child(5){
+  transition-delay:.33s;
+}
+
+.memory:nth-child(6){
+  transition-delay:.40s;
+}
+
+
+/* =========================================
+   GLASS / CARD
+========================================= */
+
+.glass.scroll-reveal,
+.timeline article.scroll-reveal,
+.growth article.scroll-reveal,
+.music.scroll-reveal{
+  transform:translateY(40px);
+}
+
+.glass.scroll-reveal.show,
+.timeline article.scroll-reveal.show,
+.growth article.scroll-reveal.show,
+.music.scroll-reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* =========================================
+   GROWTH CARDS STAGGER
+========================================= */
+
+.growth article:nth-child(1){
+  transition-delay:.05s;
+}
+
+.growth article:nth-child(2){
+  transition-delay:.15s;
+}
+
+.growth article:nth-child(3){
+  transition-delay:.25s;
+}
+
+
+/* =========================================
+   MOBILE
+   Animasi dibuat lebih ringan
+========================================= */
+
+@media (max-width:700px){
+
+  .scroll-reveal{
+    transform:translateY(25px);
+    transition:
+      opacity .65s ease,
+      transform .65s cubic-bezier(.22,1,.36,1);
+  }
+
+
+  /* Heading */
+
+  .heading.scroll-reveal{
+    transform:translateY(20px);
+  }
+
+  .heading.scroll-reveal.show{
+    transform:translateY(0);
+  }
+
+
+  /* Memory */
+
+  .memory.scroll-reveal{
+    transform:translateY(25px) scale(.985);
+    transition:
+      opacity .6s ease,
+      transform .6s cubic-bezier(.22,1,.36,1);
+  }
+
+  .memory.scroll-reveal.show{
+    transform:translateY(0) scale(1);
+  }
+
+
+  /* Card lainnya */
+
+  .glass.scroll-reveal,
+  .timeline article.scroll-reveal,
+  .growth article.scroll-reveal,
+  .music.scroll-reveal{
+    transform:translateY(25px);
+  }
+
+  .glass.scroll-reveal.show,
+  .timeline article.scroll-reveal.show,
+  .growth article.scroll-reveal.show,
+  .music.scroll-reveal.show{
+    transform:translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   Jika perangkat meminta reduced motion,
+   animasi dimatikan
+========================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+  .scroll-reveal,
+  .memory.scroll-reveal,
+  .glass.scroll-reveal,
+  .growth article.scroll-reveal,
+  .timeline article.scroll-reveal,
+  .music.scroll-reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+
+}
