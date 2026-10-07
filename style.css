@@ -8,11 +8,6 @@
   --muted:#aaa4c3;
 }
 
-
-/* =========================
-   RESET
-========================= */
-
 *{
   box-sizing:border-box;
 }
@@ -117,27 +112,18 @@ body{
   top:18px;
   left:50%;
   transform:translateX(-50%);
-
   width:min(1180px,calc(100% - 32px));
-
   padding:13px 18px;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
-
   border:1px solid var(--line);
-
   background:rgba(8,7,22,.68);
   backdrop-filter:blur(18px);
-
   border-radius:18px;
-
   z-index:20;
-
-  box-shadow:
-    0 12px 50px rgba(0,0,0,.28);
+  box-shadow:0 12px 50px rgba(0,0,0,.28);
 }
 
 .brand{
@@ -151,9 +137,7 @@ body{
   color:var(--pink);
   font-size:22px;
   margin-right:7px;
-
-  text-shadow:
-    0 0 15px var(--pink);
+  text-shadow:0 0 15px var(--pink);
 }
 
 nav{
@@ -166,11 +150,8 @@ nav a{
   color:#bdb8d0;
   text-decoration:none;
   font-size:12px;
-
   padding:9px 11px;
-
   border-radius:10px;
-
   transition:.2s;
 }
 
@@ -182,10 +163,8 @@ nav a.active{
 
 .menu{
   display:none;
-
   background:none;
   border:0;
-
   color:white;
   font-size:22px;
 }
@@ -197,11 +176,8 @@ nav a.active{
 
 .page{
   width:min(1080px,calc(100% - 40px));
-
   margin:auto;
-
   padding:140px 0 90px;
-
   min-height:100vh;
 }
 
@@ -212,7 +188,6 @@ nav a.active{
 
 .hero{
   text-align:center;
-
   display:flex;
   align-items:center;
   justify-content:center;
@@ -225,81 +200,52 @@ nav a.active{
 .tiny{
   font-size:10px;
   letter-spacing:3px;
-
   color:#d2a6e4;
-
   font-weight:600;
 }
 
 .hero h1{
-  font:
-    600 clamp(58px,9vw,105px)/.9
-    "Cormorant Garamond",
-    serif;
-
+  font:600 clamp(58px,9vw,105px)/.9 "Cormorant Garamond",serif;
   margin:22px 0 18px;
-
   letter-spacing:-3px;
 }
 
 .hero h1 em{
   color:var(--pink);
   font-style:normal;
-
-  text-shadow:
-    0 0 30px rgba(255,122,203,.65);
+  text-shadow:0 0 30px rgba(255,122,203,.65);
 }
 
 .lead{
   max-width:580px;
-
   margin:0 auto;
-
   color:var(--muted);
-
   line-height:1.8;
-
   font-size:14px;
 }
 
 .hero-heart{
   font-size:70px;
-
   color:#ff82d0;
-
   margin:26px auto;
-
   text-shadow:
     0 0 25px rgba(255,82,190,.8),
     0 0 60px rgba(192,76,255,.35);
-
-  animation:
-    pulse 2.6s ease-in-out infinite;
+  animation:pulse 2.6s ease-in-out infinite;
 }
-
-
-/* =========================
-   COUNTDOWN
-========================= */
 
 .magic{
   margin:20px auto 28px;
 }
 
 .magic h2{
-  font:
-    500 31px
-    "Cormorant Garamond",
-    serif;
-
+  font:500 31px "Cormorant Garamond",serif;
   margin:10px 0 20px;
 }
 
 .countdown{
   display:grid;
-
   grid-template-columns:repeat(6,1fr);
-
   gap:10px;
 }
 
@@ -313,11 +259,8 @@ nav a.active{
       rgba(255,255,255,.075),
       rgba(255,255,255,.025)
     );
-
   border:1px solid var(--line);
-
   backdrop-filter:blur(14px);
-
   box-shadow:
     inset 0 1px rgba(255,255,255,.05),
     0 20px 60px rgba(0,0,0,.14);
@@ -325,333 +268,397 @@ nav a.active{
 
 .countdown div{
   padding:18px 8px;
-
   border-radius:14px;
 }
 
 .countdown b{
   display:block;
-
   font-size:25px;
 }
 
 .countdown span{
   display:block;
-
   margin-top:5px;
-
   color:#9c96b5;
-
   font-size:10px;
 }
 
-
-/* =========================
-   STATS
-========================= */
-
 .stats{
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
   gap:12px;
-
   margin-top:20px;
 }
 
 .stats>div{
   padding:18px;
-
   border-radius:15px;
 }
 
 .stats strong{
   display:block;
-
-  font:
-    500 25px
-    "Cormorant Garamond";
-
+  font:500 25px "Cormorant Garamond";
   color:#ff9bd8;
 }
 
 .stats span{
   display:block;
-
   color:#9e98b7;
-
   font-size:10px;
-
   margin-top:4px;
 }
 
 
 /* =========================
-   HEADINGS
+   SECTION HEADING
 ========================= */
 
 .heading{
   text-align:center;
-
   margin-bottom:45px;
 }
 
 .heading h2{
-  font:
-    600 58px
-    "Cormorant Garamond";
-
+  font:600 58px "Cormorant Garamond";
   margin:8px 0;
 }
 
 .heading p{
   color:var(--muted);
-
   max-width:570px;
-
   margin:auto;
-
   line-height:1.8;
-
   font-size:13px;
 }
 
 
-/* =========================
-   JOURNEY
-========================= */
+/* =========================================================
+   OUR JOURNEY
+   ZIG-ZAG TIMELINE
+========================================================= */
 
-.timeline{
-  position:relative;
-
-  max-width:760px;
-
-  margin:auto;
+.journey-heading{
+  margin-bottom:70px;
 }
 
-.timeline:before{
+
+/* Container utama */
+
+.journey-timeline{
+  position:relative;
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+  padding:10px 0 30px;
+}
+
+
+/* Garis vertikal tengah */
+
+.journey-timeline::before{
   content:"";
-
   position:absolute;
-
-  left:25px;
-  top:8px;
-  bottom:8px;
-
+  top:0;
+  bottom:0;
+  left:50%;
   width:1px;
-
+  transform:translateX(-50%);
   background:
     linear-gradient(
-      var(--pink),
+      to bottom,
+      transparent,
+      rgba(255,122,203,.65) 8%,
+      rgba(198,140,255,.7) 50%,
+      rgba(255,122,203,.65) 92%,
       transparent
+    );
+  box-shadow:
+    0 0 12px rgba(255,122,203,.3);
+}
+
+
+/* Setiap item */
+
+.journey-item{
+  position:relative;
+  width:100%;
+  min-height:230px;
+  display:flex;
+  align-items:center;
+}
+
+
+/* Card */
+
+.journey-card{
+  position:relative;
+  width:calc(50% - 75px);
+  min-height:210px;
+  padding:16px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  overflow:hidden;
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.journey-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,122,203,.38);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.3),
+    0 0 30px rgba(255,100,200,.08);
+}
+
+
+/* Posisi kiri */
+
+.journey-left{
+  justify-content:flex-start;
+}
+
+.journey-left .journey-card{
+  margin-right:auto;
+}
+
+
+/* Posisi kanan */
+
+.journey-right{
+  justify-content:flex-end;
+}
+
+.journey-right .journey-card{
+  margin-left:auto;
+}
+
+
+/* Garis horizontal */
+
+.journey-left::after,
+.journey-right::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:75px;
+  height:1px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,122,203,.15),
+      rgba(255,122,203,.7)
+    );
+  box-shadow:0 0 10px rgba(255,122,203,.25);
+}
+
+
+/* Garis kiri menuju tengah */
+
+.journey-left::after{
+  right:50%;
+}
+
+
+/* Garis kanan menuju tengah */
+
+.journey-right::after{
+  left:50%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,122,203,.7),
+      rgba(255,122,203,.15)
     );
 }
 
-.timeline article{
-  display:grid;
 
-  grid-template-columns:52px 1fr;
+/* Titik timeline */
 
-  gap:25px;
-
-  margin-bottom:28px;
-}
-
-.timeline article>b{
-  width:52px;
-  height:52px;
-
-  display:grid;
-
-  place-items:center;
-
-  border:
-    1px solid
-    rgba(255,122,203,.25);
-
+.journey-dot{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:15px;
+  height:15px;
+  transform:translate(-50%,-50%);
   border-radius:50%;
-
-  background:#100d27;
-
-  color:#f7a0d9;
-
-  font-size:11px;
+  background:#ff8dd3;
+  border:3px solid #120d28;
+  box-shadow:
+    0 0 0 1px rgba(255,122,203,.65),
+    0 0 15px rgba(255,122,203,.9),
+    0 0 35px rgba(198,140,255,.55);
+  z-index:5;
 }
 
-.timeline article div{
-  padding:2px 0;
+
+/* Foto */
+
+.journey-photo{
+  flex:0 0 190px;
+  width:190px;
+  height:145px;
+  overflow:hidden;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,.1);
+  background:#16122d;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.3),
+    inset 0 0 20px rgba(255,100,200,.06);
 }
 
-.timeline small,
-.growth small{
+
+/*
+  Semua foto dipaksa masuk
+  ke ukuran 190 x 145.
+  Jadi walaupun PNG aslinya berbeda,
+  tampilannya tetap seragam.
+*/
+
+.journey-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .5s ease;
+}
+
+.journey-card:hover .journey-photo img{
+  transform:scale(1.05);
+}
+
+
+/* Isi card */
+
+.journey-info{
+  flex:1;
+  min-width:0;
+}
+
+.journey-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:29px;
+  height:29px;
+  margin-bottom:8px;
+  border-radius:50%;
+  border:1px solid rgba(255,122,203,.25);
+  color:#ff9bd8;
   font-size:9px;
+}
 
+.journey-label{
+  font-size:8px;
   letter-spacing:2px;
-
   color:#b897cb;
+  margin-bottom:5px;
 }
 
-.timeline h3{
-  font:
-    500 28px
-    "Cormorant Garamond";
-
-  margin:8px 0;
+.journey-info h3{
+  font:500 28px "Cormorant Garamond";
+  line-height:1.05;
+  margin:5px 0 8px;
+  color:#fff;
 }
 
-.timeline p{
+.journey-info p{
   color:var(--muted);
-
-  font-size:13px;
-
-  line-height:1.8;
-
+  font-size:11px;
+  line-height:1.7;
   margin:0;
 }
 
 
-/* =========================
+/* =========================================================
    LOVE LETTER
-========================= */
+========================================================= */
 
 .letter{
   max-width:700px;
-
   margin:auto;
-
   padding:50px;
-
   border-radius:25px;
-
   text-align:center;
 }
 
 .seal{
   width:54px;
   height:54px;
-
   border-radius:50%;
-
   display:grid;
-
   place-items:center;
-
   margin:0 auto 18px;
-
-  border:
-    1px solid
-    rgba(255,122,203,.35);
-
+  border:1px solid rgba(255,122,203,.35);
   color:#ff9bda;
-
   font-size:24px;
-
-  box-shadow:
-    0 0 25px
-    rgba(255,80,190,.12);
+  box-shadow:0 0 25px rgba(255,80,190,.12);
 }
 
 .letter h3{
-  font:
-    600 38px
-    "Cormorant Garamond";
-
+  font:600 38px "Cormorant Garamond";
   margin:12px;
 }
 
 .letter p{
   color:#b4aec8;
-
   line-height:1.9;
-
   font-size:13px;
-
   text-align:left;
 }
 
 .outline{
   margin-top:12px;
-
-  border:
-    1px solid
-    rgba(255,140,210,.4);
-
+  border:1px solid rgba(255,140,210,.4);
   background:rgba(255,255,255,.04);
-
   color:#fff;
-
   border-radius:999px;
-
   padding:12px 18px;
-
   cursor:pointer;
 }
 
 
-/* =========================
+/* =========================================================
    MEMORIES
-========================= */
+========================================================= */
 
 .gallery{
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:15px;
 }
 
 .memory{
   height:245px;
-
   position:relative;
-
   overflow:hidden;
-
   cursor:pointer;
-
-  border:
-    1px solid
-    var(--line);
-
+  border:1px solid var(--line);
   border-radius:20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #251837,
-      #11132d
-    );
+  background:linear-gradient(135deg,#251837,#11132d);
 }
-
-
-/* FOTO MEMENUHI SELURUH KARTU */
 
 .memory-image{
   position:absolute;
-
   inset:0;
-
   width:100%;
   height:100%;
-
   overflow:hidden;
-
   background:rgba(255,255,255,.04);
-
   z-index:1;
 }
 
 .memory-image img{
   width:100%;
   height:100%;
-
   display:block;
-
   object-fit:cover;
-
   object-position:center;
-
   transition:
     transform .5s ease,
     filter .5s ease;
@@ -659,22 +666,14 @@ nav a.active{
 
 .memory:hover .memory-image img{
   transform:scale(1.06);
-
   filter:brightness(1.08);
 }
 
-
-/* OVERLAY GELAP DI BAGIAN BAWAH FOTO */
-
 .memory:before{
   content:"";
-
   position:absolute;
-
   inset:0;
-
   z-index:2;
-
   background:
     linear-gradient(
       to top,
@@ -682,194 +681,125 @@ nav a.active{
       rgba(5,4,20,.25) 45%,
       transparent 75%
     );
-
   pointer-events:none;
 }
 
-
-/* ISI JUDUL MEMORIES */
-
 .memory-content{
   position:absolute;
-
   left:18px;
   right:18px;
   bottom:16px;
-
   z-index:3;
 }
 
 .memory-content b{
-  font:
-    500 25px
-    "Cormorant Garamond";
-
+  font:500 25px "Cormorant Garamond";
   color:#fff;
 }
 
 .memory-content span{
   display:block;
-
   color:#c0bad0;
-
   font-size:10px;
-
   margin-top:3px;
 }
 
-
-/* =========================
-   MEMORIES NAVIGATION
-========================= */
-
 .memory-navigation{
   display:flex;
-
   justify-content:center;
   align-items:center;
-
   gap:24px;
-
   margin-top:40px;
 }
 
 .memory-nav-btn{
   display:inline-flex;
-
   align-items:center;
   justify-content:center;
-
   padding:12px 22px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.15);
-
+  border:1px solid rgba(255,255,255,.15);
   border-radius:14px;
-
   color:#fff;
-
   text-decoration:none;
-
-  background:
-    rgba(255,255,255,.06);
-
+  background:rgba(255,255,255,.06);
   backdrop-filter:blur(10px);
-
   transition:.3s ease;
 }
 
 .memory-nav-btn:hover{
   transform:translateY(-2px);
-
-  background:
-    rgba(255,105,180,.15);
-
-  border-color:
-    rgba(255,105,180,.5);
-
-  box-shadow:
-    0 8px 25px
-    rgba(255,105,180,.12);
+  background:rgba(255,105,180,.15);
+  border-color:rgba(255,105,180,.5);
+  box-shadow:0 8px 25px rgba(255,105,180,.12);
 }
 
 .memory-page-number{
-  color:
-    rgba(255,255,255,.7);
-
+  color:rgba(255,255,255,.7);
   font-size:14px;
-
   min-width:35px;
-
   text-align:center;
 }
 
 
-/* =========================
+/* =========================================================
    GROWTH
-========================= */
+========================================================= */
 
 .growth{
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:15px;
 }
 
 .growth article{
   padding:30px;
-
   border-radius:22px;
 }
 
 .growth article>span{
   font-size:32px;
-
   color:#ff93d5;
 }
 
 .growth h3{
-  font:
-    500 30px
-    "Cormorant Garamond";
-
+  font:500 30px "Cormorant Garamond";
   margin:15px 0 7px;
 }
 
 .growth p{
   color:var(--muted);
-
   line-height:1.8;
-
   font-size:13px;
 }
 
 
-/* =========================
+/* =========================================================
    MUSIC
-========================= */
+========================================================= */
 
 .music{
   display:grid;
-
   grid-template-columns:370px 1fr;
-
   gap:18px;
-
   max-width:900px;
-
   margin:auto;
 }
 
 .player{
   border-radius:24px;
-
   padding:25px;
 }
 
-
-/* COVER MUSIK */
-
 .cover{
   width:100%;
-
   height:270px;
-
   overflow:hidden;
-
   position:relative;
-
   display:block;
-
   padding:0 !important;
-
   margin:0 0 22px;
-
   box-sizing:border-box;
-
   border-radius:18px;
-
   background:
     radial-gradient(
       circle at 35% 25%,
@@ -877,167 +807,114 @@ nav a.active{
       #4d397c 45%,
       #17152e
     );
-
   box-shadow:
-    inset 0 0 70px
-    rgba(255,100,200,.2);
+    inset 0 0 70px rgba(255,100,200,.2);
 }
 
 .cover img{
   width:100%;
   height:100%;
-
   display:block;
-
   margin:0;
   padding:0;
-
   object-fit:cover;
-
   object-position:center;
-
   border-radius:inherit;
 }
 
 .player h3{
-  font:
-    600 29px
-    "Cormorant Garamond";
-
+  font:600 29px "Cormorant Garamond";
   margin:10px 0 2px;
 }
 
 .player p{
   color:#a49dbb;
-
   font-size:12px;
-
   margin:0 0 20px;
 }
 
 .player input{
   width:100%;
-
   accent-color:#e884ca;
 }
 
 .player-controls{
   display:flex;
-
   justify-content:center;
   align-items:center;
-
   gap:18px;
-
   margin-top:18px;
 }
 
 .player-controls button{
   width:42px;
   height:42px;
-
   border-radius:50%;
-
-  border:
-    1px solid
-    var(--line);
-
-  background:
-    rgba(255,255,255,.05);
-
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
   color:#fff;
-
   font-size:20px;
-
   cursor:pointer;
 }
 
 .player-controls #play{
   width:54px;
   height:54px;
-
   background:#ff83cc;
-
   color:#1b0e22;
-
   border:0;
-
-  box-shadow:
-    0 0 25px
-    rgba(255,100,200,.3);
+  box-shadow:0 0 25px rgba(255,100,200,.3);
 }
 
 .playlist{
   display:flex;
-
   flex-direction:column;
-
   gap:10px;
 }
 
 .playlist-item{
   border-radius:15px;
-
   padding:15px 18px;
-
   display:flex;
-
   align-items:center;
-
   gap:14px;
-
   cursor:pointer;
 }
 
 .playlist-item.active{
-  border-color:
-    rgba(255,130,205,.45);
-
-  background:
-    rgba(255,110,200,.09);
+  border-color:rgba(255,130,205,.45);
+  background:rgba(255,110,200,.09);
 }
 
 .track-num{
   color:#9e97b4;
-
   font-size:11px;
-
   width:22px;
 }
 
 .track-title{
   flex:1;
-
   font-size:13px;
 }
 
 .track-artist{
   color:#928ca8;
-
   font-size:10px;
 }
 
 
-/* =========================
+/* =========================================================
    LOVE LETTER MODAL
-========================= */
+========================================================= */
 
 .modal{
   position:fixed;
-
   inset:0;
-
   z-index:9998;
-
   display:none;
-
   place-items:center;
-
   padding:20px;
-
-  background:
-    rgba(4,3,13,.82);
-
+  background:rgba(4,3,13,.82);
   backdrop-filter:blur(13px);
 }
 
@@ -1047,94 +924,60 @@ nav a.active{
 
 .modal-card{
   width:min(620px,100%);
-
   padding:45px;
-
-  border:
-    1px solid
-    var(--line);
-
+  border:1px solid var(--line);
   border-radius:25px;
-
   background:
     linear-gradient(
       145deg,
       rgba(38,27,66,.94),
       rgba(12,10,29,.96)
     );
-
   text-align:center;
-
   position:relative;
-
-  box-shadow:
-    0 30px 100px
-    rgba(0,0,0,.5);
+  box-shadow:0 30px 100px rgba(0,0,0,.5);
 }
 
 .modal-card h2{
-  font:
-    600 46px
-    "Cormorant Garamond";
-
+  font:600 46px "Cormorant Garamond";
   margin:12px;
 }
 
 .modal-card p{
   color:#bdb6cc;
-
   line-height:1.9;
-
   font-size:13px;
-
   text-align:left;
 }
 
 .modal-card>span{
   color:#e697cb;
-
   font-size:11px;
 }
 
 
-/* =========================
-   FOTO FULLSCREEN MODAL
-========================= */
+/* =========================================================
+   PHOTO FULLSCREEN MODAL
+========================================================= */
 
 .photo-modal{
   position:fixed;
-
   inset:0;
-
   z-index:9999;
-
   display:flex;
-
   flex-direction:column;
-
   align-items:center;
   justify-content:center;
-
   width:100%;
   height:100%;
-
   padding:30px;
-
   box-sizing:border-box;
-
-  background:
-    rgba(5,4,18,.94);
-
+  background:rgba(5,4,18,.94);
   backdrop-filter:blur(18px);
-
   -webkit-backdrop-filter:blur(18px);
-
   opacity:0;
-
   visibility:hidden;
-
   pointer-events:none;
-
   transition:
     opacity .3s ease,
     visibility .3s ease;
@@ -1142,248 +985,146 @@ nav a.active{
 
 .photo-modal.show{
   opacity:1;
-
   visibility:visible;
-
   pointer-events:auto;
 }
 
-
-/* =========================
-   FOTO FULLSCREEN
-========================= */
-
 .photo-placeholder{
   width:auto !important;
-
   height:auto !important;
-
   max-width:90vw;
-
   max-height:76vh;
-
   display:flex !important;
-
   align-items:center;
   justify-content:center;
-
   padding:0 !important;
-
   margin:0 !important;
-
   background:transparent !important;
-
   border:none !important;
-
   border-radius:0 !important;
-
   box-shadow:none !important;
-
   color:transparent !important;
-
   flex:0 0 auto;
-
-  animation:
-    photoZoom .35s ease;
+  animation:photoZoom .35s ease;
 }
-
-
-/* HILANGKAN PHOTO PREVIEW */
 
 .photo-placeholder::before,
 .photo-placeholder::after{
   content:none !important;
-
   display:none !important;
 }
 
-
-/* FOTO ASLI */
-
 .photo-placeholder img{
   display:block;
-
   width:auto !important;
-
   height:auto !important;
-
   max-width:90vw;
-
   max-height:76vh;
-
   object-fit:contain;
-
   object-position:center;
-
   margin:0 !important;
-
   padding:0 !important;
-
   border:none !important;
-
   border-radius:18px;
-
   box-shadow:
-    0 0 50px
-    rgba(255,105,180,.18),
-
-    0 20px 80px
-    rgba(0,0,0,.55);
+    0 0 50px rgba(255,105,180,.18),
+    0 20px 80px rgba(0,0,0,.55);
 }
-
-
-/* =========================
-   JUDUL FOTO
-========================= */
 
 .photo-modal > p{
   position:static !important;
-
   width:100% !important;
-
   max-width:90vw;
-
   margin:12px 0 0 !important;
-
   padding:0 !important;
-
   color:#fff !important;
-
-  font:
-    500 24px
-    "Cormorant Garamond";
-
+  font:500 24px "Cormorant Garamond";
   line-height:1.2;
-
   letter-spacing:.3px;
-
   text-align:center;
-
   flex:0 0 auto;
-
   z-index:10002;
 }
 
-
-/* =========================
-   CLOSE BUTTON
-========================= */
-
 .x{
   position:absolute;
-
   top:14px;
-
   right:16px;
-
   background:none;
-
   border:0;
-
   color:#bcb5ca;
-
   font-size:27px;
-
   cursor:pointer;
 }
 
 .photo-modal .x{
   position:absolute !important;
-
   top:25px !important;
-
   right:30px !important;
-
   width:45px !important;
-
   height:45px !important;
-
   display:flex !important;
-
   align-items:center;
-
   justify-content:center;
-
   padding:0 !important;
-
-  border:
-    1px solid
-    rgba(255,255,255,.18) !important;
-
+  border:1px solid rgba(255,255,255,.18) !important;
   border-radius:50% !important;
-
-  background:
-    rgba(255,255,255,.08) !important;
-
+  background:rgba(255,255,255,.08) !important;
   color:#fff !important;
-
   font-size:28px !important;
-
   line-height:1;
-
   cursor:pointer;
-
   z-index:10003;
-
   transition:.3s ease;
 }
 
 .photo-modal .x:hover{
   transform:rotate(90deg);
-
-  background:
-    rgba(255,105,180,.18) !important;
-
-  border-color:
-    rgba(255,105,180,.5) !important;
-
-  box-shadow:
-    0 0 25px
-    rgba(255,105,180,.2);
+  background:rgba(255,105,180,.18) !important;
+  border-color:rgba(255,105,180,.5) !important;
+  box-shadow:0 0 25px rgba(255,105,180,.2);
 }
 
 
-/* =========================
+/* =========================================================
    ANIMATION
-========================= */
+========================================================= */
 
 @keyframes pulse{
-  0%,100%{
+
+  0%,
+  100%{
     transform:scale(1);
   }
 
   50%{
     transform:scale(1.08);
   }
+
 }
 
 @keyframes photoZoom{
+
   from{
     opacity:0;
-
     transform:scale(.92);
   }
 
   to{
     opacity:1;
-
     transform:scale(1);
   }
+
 }
-
-
-/* =========================
-   BODY LOCK
-========================= */
 
 body.modal-open{
   overflow:hidden;
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media(max-width:800px){
 
@@ -1397,26 +1138,15 @@ body.modal-open{
 
   nav{
     display:none;
-
     position:absolute;
-
     top:60px;
-
     left:0;
     right:0;
-
     flex-direction:column;
-
     align-items:stretch;
-
     padding:8px;
-
-    border:
-      1px solid
-      var(--line);
-
+    border:1px solid var(--line);
     background:#0c0a1d;
-
     border-radius:15px;
   }
 
@@ -1452,12 +1182,47 @@ body.modal-open{
   .heading h2{
     font-size:48px;
   }
+
+
+  /* JOURNEY TABLET */
+
+  .journey-card{
+    width:calc(50% - 55px);
+  }
+
+  .journey-photo{
+    flex-basis:145px;
+    width:145px;
+    height:125px;
+  }
+
+  .journey-left::after,
+  .journey-right::after{
+    width:55px;
+  }
+
+  .journey-left::after{
+    right:50%;
+  }
+
+  .journey-right::after{
+    left:50%;
+  }
+
+  .journey-info h3{
+    font-size:24px;
+  }
+
+  .journey-info p{
+    font-size:10px;
+  }
+
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:700px){
 
@@ -1475,47 +1240,119 @@ body.modal-open{
 
   .photo-placeholder{
     max-width:94vw;
-
     max-height:74vh;
   }
 
   .photo-placeholder img{
     max-width:94vw;
-
     max-height:74vh;
-
     border-radius:14px;
   }
 
   .photo-modal > p{
     max-width:94vw;
-
     margin-top:8px !important;
-
     font-size:19px !important;
   }
 
   .photo-modal .x{
     top:18px !important;
-
     right:18px !important;
-
     width:40px !important;
-
     height:40px !important;
-
     font-size:24px !important;
   }
+
+
+  /* JOURNEY MOBILE */
+
+  .journey-heading{
+    margin-bottom:45px;
+  }
+
+  /*
+    Di HP garis tetap berada di tengah
+    agar konsep zig-zag masih terasa.
+  */
+
+  .journey-timeline{
+    padding:5px 0 20px;
+  }
+
+  .journey-item{
+    min-height:185px;
+  }
+
+  .journey-card{
+    width:calc(50% - 38px);
+    min-height:160px;
+    padding:10px;
+    gap:10px;
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .journey-photo{
+    flex:0 0 auto;
+    width:100%;
+    height:105px;
+    border-radius:12px;
+  }
+
+  .journey-info{
+    text-align:left;
+  }
+
+  .journey-number{
+    display:none;
+  }
+
+  .journey-label{
+    font-size:6px;
+    letter-spacing:1.5px;
+    margin-bottom:3px;
+  }
+
+  .journey-info h3{
+    font-size:21px;
+    margin:3px 0 5px;
+  }
+
+  .journey-info p{
+    font-size:8px;
+    line-height:1.5;
+  }
+
+  .journey-left::after,
+  .journey-right::after{
+    width:38px;
+  }
+
+  .journey-left::after{
+    right:50%;
+  }
+
+  .journey-right::after{
+    left:50%;
+  }
+
+  .journey-dot{
+    width:12px;
+    height:12px;
+    border-width:2px;
+  }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media(max-width:500px){
 
   .page{
-    width:min(
-      calc(100% - 24px),
-      1080px
-    );
+    width:min(calc(100% - 24px),1080px);
   }
 
   .hero h1{
@@ -1556,13 +1393,11 @@ body.modal-open{
 
   .memory-navigation{
     gap:14px;
-
     margin-top:30px;
   }
 
   .memory-nav-btn{
     padding:10px 17px;
-
     font-size:12px;
   }
 
@@ -1572,26 +1407,62 @@ body.modal-open{
 
   .photo-modal > p{
     font-size:18px !important;
-
     margin-top:7px !important;
   }
 
   .photo-placeholder{
     max-width:92vw;
-
     max-height:70vh;
   }
 
   .photo-placeholder img{
     max-width:92vw;
-
     max-height:70vh;
   }
+
+
+  /* JOURNEY SMALL MOBILE */
+
+  .journey-item{
+    min-height:175px;
+  }
+
+  .journey-card{
+    width:calc(50% - 31px);
+    min-height:150px;
+    padding:8px;
+    gap:7px;
+    border-radius:15px;
+  }
+
+  .journey-photo{
+    height:85px;
+    border-radius:9px;
+  }
+
+  .journey-info h3{
+    font-size:18px;
+  }
+
+  .journey-info p{
+    font-size:7px;
+  }
+
+  .journey-label{
+    font-size:5px;
+  }
+
+  .journey-left::after,
+  .journey-right::after{
+    width:31px;
+  }
+
 }
-/* =========================================
+
+
+/* =========================================================
    SCROLL REVEAL ANIMATION
-   Desktop + Mobile
-========================================= */
+========================================================= */
 
 .scroll-reveal{
   opacity:0;
@@ -1606,11 +1477,6 @@ body.modal-open{
   transform:translateY(0);
 }
 
-
-/* =========================================
-   SECTION HEADING
-========================================= */
-
 .heading.scroll-reveal{
   transform:translateY(35px);
 }
@@ -1618,11 +1484,6 @@ body.modal-open{
 .heading.scroll-reveal.show{
   transform:translateY(0);
 }
-
-
-/* =========================================
-   MEMORY CARDS
-========================================= */
 
 .memory.scroll-reveal{
   transform:translateY(35px) scale(.97);
@@ -1635,9 +1496,6 @@ body.modal-open{
   opacity:1;
   transform:translateY(0) scale(1);
 }
-
-
-/* Memory muncul satu per satu */
 
 .memory:nth-child(1){
   transition-delay:.05s;
@@ -1663,11 +1521,6 @@ body.modal-open{
   transition-delay:.40s;
 }
 
-
-/* =========================================
-   GLASS / CARD
-========================================= */
-
 .glass.scroll-reveal,
 .timeline article.scroll-reveal,
 .growth article.scroll-reveal,
@@ -1683,11 +1536,6 @@ body.modal-open{
   transform:translateY(0);
 }
 
-
-/* =========================================
-   GROWTH CARDS STAGGER
-========================================= */
-
 .growth article:nth-child(1){
   transition-delay:.05s;
 }
@@ -1701,12 +1549,7 @@ body.modal-open{
 }
 
 
-/* =========================================
-   MOBILE
-   Animasi dibuat lebih ringan
-========================================= */
-
-@media (max-width:700px){
+@media(max-width:700px){
 
   .scroll-reveal{
     transform:translateY(25px);
@@ -1715,9 +1558,6 @@ body.modal-open{
       transform .65s cubic-bezier(.22,1,.36,1);
   }
 
-
-  /* Heading */
-
   .heading.scroll-reveal{
     transform:translateY(20px);
   }
@@ -1725,9 +1565,6 @@ body.modal-open{
   .heading.scroll-reveal.show{
     transform:translateY(0);
   }
-
-
-  /* Memory */
 
   .memory.scroll-reveal{
     transform:translateY(25px) scale(.985);
@@ -1739,9 +1576,6 @@ body.modal-open{
   .memory.scroll-reveal.show{
     transform:translateY(0) scale(1);
   }
-
-
-  /* Card lainnya */
 
   .glass.scroll-reveal,
   .timeline article.scroll-reveal,
@@ -1760,13 +1594,7 @@ body.modal-open{
 }
 
 
-/* =========================================
-   ACCESSIBILITY
-   Jika perangkat meminta reduced motion,
-   animasi dimatikan
-========================================= */
-
-@media (prefers-reduced-motion:reduce){
+@media(prefers-reduced-motion:reduce){
 
   .scroll-reveal,
   .memory.scroll-reveal,
