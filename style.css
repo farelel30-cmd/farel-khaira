@@ -623,122 +623,135 @@ nav a.active{
 }
 
 
+
 /* =========================================================
-   MEMORIES
+   MEMORIES — DESAIN LAMA
 ========================================================= */
 
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
 }
 
-.memory{
-  height:245px;
-  position:relative;
-  overflow:hidden;
-  cursor:pointer;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:linear-gradient(135deg,#251837,#11132d);
+
+.memory {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-width: 300px;
+  width: 100%;
+  justify-self: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #251837, #11132d);
+  transition: transform .3s ease, border-color .3s ease;
 }
 
-.memory-image{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  background:rgba(255,255,255,.04);
-  z-index:1;
+
+.memory:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 122, 203, .4);
 }
 
-.memory-image img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center;
-  transition:
-    transform .5s ease,
-    filter .5s ease;
+
+
+#memories .gallery .memory-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: transparent;
 }
 
-.memory:hover .memory-image img{
-  transform:scale(1.06);
-  filter:brightness(1.08);
+
+
+#memories .gallery .memory-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  transition: transform .4s ease, filter .4s ease;
 }
 
-.memory:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  background:
-    linear-gradient(
-      to top,
-      rgba(5,4,20,.92),
-      rgba(5,4,20,.25) 45%,
-      transparent 75%
-    );
-  pointer-events:none;
+.memory:hover .memory-image img {
+  transform: scale(1.04);
+  filter: brightness(1.08);
 }
 
-.memory-content{
-  position:absolute;
-  left:18px;
-  right:18px;
-  bottom:16px;
-  z-index:3;
+.memory::before {
+  content: none;
 }
 
-.memory-content b{
-  font:500 25px "Cormorant Garamond";
-  color:#fff;
+
+#memories .gallery .memory-content {
+  position: static;
+  flex: 1;
+  padding: 8px 12px 12px;
+  background: transparent;
+  z-index: 1;
 }
 
-.memory-content span{
-  display:block;
-  color:#c0bad0;
-  font-size:10px;
-  margin-top:3px;
+
+.memory-content b {
+  display: block;
+  color: #fff;
+  font: 500 25px "Cormorant Garamond", serif;
 }
 
-.memory-navigation{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:24px;
-  margin-top:40px;
+.memory-content span {
+  display: block;
+  margin-top: 4px;
+  color: #c0bad0;
+  font-size: 10px;
+  line-height: 1.6;
 }
 
-.memory-nav-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 22px;
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:14px;
-  color:#fff;
-  text-decoration:none;
-  background:rgba(255,255,255,.06);
-  backdrop-filter:blur(10px);
-  transition:.3s ease;
+.memory-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
 }
 
-.memory-nav-btn:hover{
-  transform:translateY(-2px);
-  background:rgba(255,105,180,.15);
-  border-color:rgba(255,105,180,.5);
-  box-shadow:0 8px 25px rgba(255,105,180,.12);
+.memory-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 14px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .06);
+  backdrop-filter: blur(10px);
+  transition: .3s ease;
 }
 
-.memory-page-number{
-  color:rgba(255,255,255,.7);
-  font-size:14px;
-  min-width:35px;
-  text-align:center;
+.memory-nav-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 105, 180, .15);
+  border-color: rgba(255, 105, 180, .5);
+  box-shadow: 0 8px 25px rgba(255, 105, 180, .12);
 }
+
+.memory-page-number {
+  min-width: 35px;
+  color: rgba(255, 255, 255, .7);
+  font-size: 14px;
+  text-align: center;
+}
+
 
 
 /* =========================================================
